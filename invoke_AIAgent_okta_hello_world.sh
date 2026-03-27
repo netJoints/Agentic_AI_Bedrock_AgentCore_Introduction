@@ -1,16 +1,17 @@
 #!/bin/bash
-# Activate virtual environment
-source /Users/shahzadali/Github/venv/bin/activate
-aws bedrock-agentcore-control list-agent-runtimes --profile=agentic-ai
+set -e
 
 # -------------------------------
-# Configuration
+# Configuration — set via environment variables or a .env file
+# export OKTA_DOMAIN="your-domain.okta.com"
+# export OKTA_CLIENT_ID="your-client-id"
+# export OKTA_CLIENT_SECRET="your-client-secret"
 # -------------------------------
-OKTA_DOMAIN="trial-3508361.okta.com"
-CLIENT_ID="0oaugi5fw5DYbhq94697"
-CLIENT_SECRET="KnmeRqGlLCkSt7JhKG9UQiX2w4vIfeIaBff4fp9KErpc4Zi8PvYyzOxSnSZme5rD"
+OKTA_DOMAIN="${OKTA_DOMAIN:?Must set OKTA_DOMAIN}"
+CLIENT_ID="${OKTA_CLIENT_ID:?Must set OKTA_CLIENT_ID}"
+CLIENT_SECRET="${OKTA_CLIENT_SECRET:?Must set OKTA_CLIENT_SECRET}"
 SCOPE="agent.invoke"
-PROMPT_TEXT="Hello"
+PROMPT_TEXT="${PROMPT_TEXT:-Hello}"
 
 # -------------------------------
 # Step 1: Get Bearer Token from Okta
