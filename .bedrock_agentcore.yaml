@@ -1,0 +1,142 @@
+default_agent: async_shopping_strands
+agents:
+  agentic_ai_agent_hello_world:
+    name: agentic_ai_agent_hello_world
+    entrypoint: agentic_ai_agent_hello_world.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/service-role/AmazonBedrockAgentCoreRuntimeServiceRole-shahzad
+      execution_role_auto_create: true
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-agentic_ai_agent_hello_world
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: agentic_ai_agent_hello_world-7V9ZDUDxXY
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/agentic_ai_agent_hello_world-7V9ZDUDxXY
+      agent_session_id: c465f33c-4b87-4de9-b619-806e7a3554de
+    codebuild:
+      project_name: bedrock-agentcore-agentic_ai_agent_hello_world-builder
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-24d0081865
+      source_bucket: bedrock-agentcore-codebuild-sources-513826297540-us-west-2
+    authorizer_configuration: null
+    oauth_configuration: null
+  Weather_Agent_Strands:
+    name: Weather_Agent_Strands
+    entrypoint: Weather_Agent_Strands.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/service-role/AmazonBedrockAgentCoreRuntimeServiceRole-shahzad
+      execution_role_auto_create: true
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/weather_agent_strands
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: null
+      agent_arn: null
+      agent_session_id: 8a227787-a61b-4d36-9dd8-2fa784d8b41b
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    authorizer_configuration: null
+    oauth_configuration: null
+  weather_agent_strands:
+    name: weather_agent_strands
+    entrypoint: agentcore-strands-data-analyst-assistant.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/service-role/AmazonBedrockAgentCoreRuntimeServiceRole-shahzad
+      execution_role_auto_create: true
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/data_analyst_agent_strands
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: weather_agent_strands-Jl8BRI94qW
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/weather_agent_strands-Jl8BRI94qW
+      agent_session_id: 5623e053-218c-4813-96d1-0de59556df48
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    authorizer_configuration: null
+    oauth_configuration: null
+  data_analyst_agent_strands:
+    name: data_analyst_agent_strands
+    entrypoint: agentcore-strands-data-analyst-assistant.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/service-role/AmazonBedrockAgentCoreRuntimeServiceRole-shahzad
+      execution_role_auto_create: true
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/data_analyst_agent_strands
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: data_analyst_agent_strands-74UFvMGyF6
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/data_analyst_agent_strands-74UFvMGyF6
+      agent_session_id: 2a3b5152-487d-4ccb-99a8-de97aa440831
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    authorizer_configuration: null
+    oauth_configuration: null
+  async_shopping_strands:
+    name: async_shopping_strands
+    entrypoint: async_shopping_with_strands.py
+    platform: linux/arm64
+    container_runtime: docker
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/service-role/AmazonBedrockAgentCoreRuntimeServiceRole-shahzad
+      execution_role_auto_create: true
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/data_analyst_agent_strands
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: async_shopping_strands-pKcu7o6fJh
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/async_shopping_strands-pKcu7o6fJh
+      agent_session_id: b93497b2-7c1f-4f21-b8cf-8637dba50cf0
+    codebuild:
+      project_name: null
+      execution_role: null
+      source_bucket: null
+    authorizer_configuration: null
+    oauth_configuration: null

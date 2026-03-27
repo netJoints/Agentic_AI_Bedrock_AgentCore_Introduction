@@ -1,0 +1,1 @@
+{"statusCode": 500, "body": "{\"error\": \"HTTPSConnectionPool(host='shahzad_ai_agent1-7xlgujcnlk.runtime.bedrock-agentcore.us-west-2.amazonaws.com', port=443): Max retries exceeded with url: /invoke (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f5f63935a10>: Failed to establish a new connection: [Errno -2] Name or service not known'))\"}"}

@@ -1,0 +1,10 @@
+  "customJWTAuthorizer": {
+    "discoveryUrl": "https://trial-3508361.okta.com/oauth2/default/.well-known/openid-configuration",
+    "allowedAudiences": [
+      "api://default"
+    ],
+    "allowedClients": [
+      "0oaugi5fw5DYbhq94697"
+    ]
+  }
+}

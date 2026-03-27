@@ -1,0 +1,6 @@
+{
+  "inboundIdentity": {
+    "type": "AWS_IAM"
+  }
+}
+

@@ -1,0 +1,10 @@
+boto3>=1.40.13
+fastapi>=0.116.1
+uvicorn>=0.35.0
+strands-agents>=1.5.0
+bedrock-agentcore>=0.1.2
+bedrock-agentcore-starter-toolkit>=0.1.6
+strands-agents-tools>=0.2.4
+typing
+botocore
+nova_act

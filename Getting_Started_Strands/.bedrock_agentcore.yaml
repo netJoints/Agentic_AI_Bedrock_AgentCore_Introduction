@@ -1,0 +1,86 @@
+default_agent: shahzad_ai_agent1
+agents:
+  shahzad_ai_agent1:
+    name: shahzad_ai_agent1
+    entrypoint: shahzad_ai_agent1.py
+    platform: linux/arm64
+    container_runtime: none
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-0a30ab5543
+      execution_role_auto_create: false
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-shahzad_ai_agent1
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: shahzad_ai_agent1-7xlgUJCNlk
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/shahzad_ai_agent1-7xlgUJCNlk
+      agent_session_id: 94940478-0745-4fb6-8854-86faab5850cb
+    codebuild:
+      project_name: bedrock-agentcore-shahzad_ai_agent1-builder
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-0a30ab5543
+      source_bucket: bedrock-agentcore-codebuild-sources-513826297540-us-west-2
+    authorizer_configuration: null
+    oauth_configuration: null
+  shahzad_ai_agent2:
+    name: shahzad_ai_agent2
+    entrypoint: shahzad_ai_agent2.py
+    platform: linux/arm64
+    container_runtime: none
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-41a2c0308c
+      execution_role_auto_create: false
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-shahzad_ai_agent2
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: shahzad_ai_agent2-bfKvAmESxw
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/shahzad_ai_agent2-bfKvAmESxw
+      agent_session_id: 3364a174-ba51-47c6-9805-ffe21aa9e22b
+    codebuild:
+      project_name: bedrock-agentcore-shahzad_ai_agent2-builder
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-41a2c0308c
+      source_bucket: bedrock-agentcore-codebuild-sources-513826297540-us-west-2
+    authorizer_configuration: null
+    oauth_configuration: null
+  shahzad_ai_agent3:
+    name: shahzad_ai_agent3
+    entrypoint: shahzad_ai_agent3.py
+    platform: linux/arm64
+    container_runtime: none
+    aws:
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKRuntime-us-west-2-c0376d9b4f
+      execution_role_auto_create: false
+      account: '513826297540'
+      region: us-west-2
+      ecr_repository: 513826297540.dkr.ecr.us-west-2.amazonaws.com/bedrock-agentcore-shahzad_ai_agent3
+      ecr_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+    bedrock_agentcore:
+      agent_id: shahzad_ai_agent3-Uu4TV1B8Ki
+      agent_arn: arn:aws:bedrock-agentcore:us-west-2:513826297540:runtime/shahzad_ai_agent3-Uu4TV1B8Ki
+      agent_session_id: null
+    codebuild:
+      project_name: bedrock-agentcore-shahzad_ai_agent3-builder
+      execution_role: arn:aws:iam::513826297540:role/AmazonBedrockAgentCoreSDKCodeBuild-us-west-2-c0376d9b4f
+      source_bucket: bedrock-agentcore-codebuild-sources-513826297540-us-west-2
+    authorizer_configuration: null
+    oauth_configuration: null
